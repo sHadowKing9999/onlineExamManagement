@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+
+{% block title %} Result({{dept}}/SEM{{sem}}) {% endblock %}
+{% block stylesheet %}
+<style>
+    .css-serial {
+counter-reset: serial-number;
+}
+
+.css-serial td:first-child:before {
+counter-increment: serial-number;
+content: counter(serial-number);
+}
+</style>
+{%endblock%}
+
+{% block content %}
+
+<h1 class="text-center">Result of {{dept}}/{{sem}}</h1>
+<div class="container mt-1">
+    <table class="table table-dark table-hover css-serial" id="admin-get-result">
+        <thead>
+            <tr>
+                <th>Serial No</th>
+                <th>Name</th>
+                {% for subject in subjects %}
+                <th>{{subject}}</th>
+                {% endfor %}
+                <th></th>
+            </tr>
+        </thead>
+        {% for student in studentOfDeptSem %}
+        <tr>
+            <td></td>
+            <td>
+                {{ student["name"] }}
+            </td>
+            {% for number in student["marks"] %}
+            <td>{{ number }}</td>
+            {% endfor %}
+            </td>
+            <td>
+                <a href="/admin/printresult/{{student['id']}}"><button class="btn btn-info">Print</button></a>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    {% endblock %}

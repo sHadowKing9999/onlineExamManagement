@@ -1,0 +1,74 @@
+[
+  {
+    "name": "santanu ghosh",
+    "id": "13935a4d-4fec-4ce1-acb3-7c6568f84b58",
+    "email": "santanu@gcect.in",
+    "academic-year": "2018-2022",
+    "dept": "IT",
+    "sem": "2",
+    "roll": "gcectb-r18-3022",
+    "reg": "181130110022 of 2018-19",
+    "marks": [
+      0,
+      14,
+      -1,
+      -1,
+      -1,
+      34,
+      14,
+      34
+    ],
+    "status": "",
+    "transactionId": "po3237034hg3721",
+    "fee": 0,
+    "password": "studentgcect"
+  },
+  {
+    "name": "sayan roy",
+    "id": "2714aa89-72be-4a6b-96ba-e052a0b48c63",
+    "email": "sayan@gcect.in",
+    "academic-year": "2018-2022",
+    "dept": "IT",
+    "sem": "2",
+    "roll": "gcectb-r18-3024",
+    "reg": "181130110024 of 2018-19",
+    "marks": [
+      60,
+      18
+    ],
+    "status": "",
+    "transactionId": 123456789,
+    "fee": 0,
+    "password": "studentgcect"
+  },
+  {
+    "name": "Sangram Modak",
+    "id": "ef551d78-ac75-4255-8677-bbd02e1c58b9",
+    "email": "sangram@gcect.com",
+    "academic-year": "2018-2022",
+    "dept": "CSE",
+    "sem": "1",
+    "roll": "GCECTB-R18-3023",
+    "reg": "181130110022 OF 2018-19",
+    "marks": [],
+    "status": "",
+    "transactionId": "1456321478",
+    "fee": 0,
+    "password": "studentgcect"
+  },
+  {
+    "name": "Reet Roy",
+    "id": "177f0aed-94e8-473e-855f-94179a822542",
+    "email": "reet@gcect.com",
+    "academic-year": "2018-2022",
+    "dept": "CSE",
+    "sem": "6",
+    "roll": "GCECTB-R18-3026",
+    "reg": "181130110026 OF 2018-19",
+    "marks": [],
+    "status": "",
+    "transactionId": 0,
+    "fee": 0,
+    "password": "studentgcect"
+  }
+]

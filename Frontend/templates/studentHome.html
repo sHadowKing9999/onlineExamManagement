@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% block title %}   GCECT Exam Admin    {% endblock %}
+
+{% block content %}
+
+{% block stylesheet %}
+<style>
+    .btn{
+        margin: 2%;
+    }
+</style>
+{%endblock%}
+
+{% block flash %}
+{% with messages = get_flashed_messages() %}
+{% if messages %}
+    {% for message in messages %}
+    <div class="alert alert-warning alert-dismissible fade show text-center" role="alert">
+        <strong>{{message}}</strong>
+      </div>
+    {% endfor %}
+{% endif %}
+{% endwith %}
+{% endblock %}
+<h1 class="text-center">GCECT EXAMINATION MANAGEMENT SYSTEM</h1>
+<h1 class="text-center">Student</h1>
+<div class="conatiner mt-5">
+    <div class="row">
+        <div class="col-4"></div>
+        <div class="col-4 text-center">
+            <a href="/student/profile"><button class="btn btn-primary">Profile</button></a>
+            <!-- <a href="/student/setquestion"><button class="btn btn-primary">Set Question</button></a> -->
+            <a href="/student/result"><button class="btn btn-primary">View Result</button></a>
+            <a href="/student/gettrxid"><button class="btn btn-primary">Add Transaction Id</button></a>
+            <a href="/student/giveExam"><button class="btn btn-primary">Take Exam</button></a>
+            <a href="/student/logout"><button class="btn btn-primary">Log Out</button></a> -->
+
+
+
+        </div>
+        <div class="col-4"></div>
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+
+{% block title %}   Student Details  {% endblock %}
+
+{% block content %}
+{% block stylesheet %}
+  <style>
+    .card{
+      color: black;
+      margin:2% 25% 2% 25%;
+    }
+    .card-body{
+      font-family: 'Courier New', Courier, monospace;
+      font-weight: bolder;
+    }
+  </style>
+{% endblock %}
+<div class="container">
+    <h1 class="text-center">Student Details</h1>
+    <div class="card" >
+        <div class="card-body offset-md-3 col-md-6">
+          <h4 class="card-title text-center">Details of {{student['name']}}</h4>
+          <p class="card-text text-center mt-1">
+            Email : {{student['email']}}
+          </p>
+          <p class="card-text text-center mt-1">
+            Roll : {{student['roll']}}
+          </p>
+          <p class="card-text text-center mt-1">
+            Reg. No. : {{student['reg']}}
+          </p>
+          <p class="card-text text-center mt-1">
+            Department : {{student['dept']}}
+          </p>
+          <p class="card-text text-center mt-1">
+            Academic Year : {{student['academic-year']}}
+          </p>
+          <p class="card-text text-center mt-1">
+            Fees Paid : {% if student['fee']==0 %}
+            No
+            {% else %}
+            Yes
+            {% endif %}
+          </p>
+        </div>
+        <a href="{{home}}" role="button" class="btn btn-light">RETURN TO HOME</a>
+    </div>
+    
+</div>
+
+{% endblock %}

@@ -1,0 +1,69 @@
+{% extends "base.html" %}
+
+{% block title %}  Student Result   {% endblock %}
+
+{% block stylesheet %}
+<style>
+    .css-serial {
+counter-reset: serial-number;
+}
+
+.css-serial td:first-child:before {
+counter-increment: serial-number;
+content: counter(serial-number);
+}
+.card{
+      color: black;
+      margin:2% 25% 2% 25%;
+    }
+.card-body{
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bolder;
+}
+</style>
+{%endblock%}
+
+{% block content %}
+
+<h1 class="text-center">Result of {{student['name']}} of {{dept}}/{{sem}}</h1>
+<div class="container mt-1">
+    <p class="text-center">Roll = {{student['roll']}}   |  Reg. No. = {{student['reg']}}</p>
+    <table class="table table-striped table-dark table-hover css-serial" id="student-get-result">
+        <thead>
+            <tr>
+                <th>Serial No</th>
+                <th>Subjects</th>
+                <th>Marks</th>
+            </tr>
+        </thead>
+        {% for subject,mark in subjects.items() %}
+        <tr>
+            <td></td>
+            <td>
+                {{ subject }}
+            </td>
+            <td>{% if mark!=-1 %}
+              {{ mark }}
+            {% else %}
+            N/A
+            {% endif %}
+            </td>
+        </tr>
+        {% endfor %}
+    </table><br/>
+    <div class="card" >
+        <div class="card-body offset-md-3 col-md-6">
+          <h4 class="card-title text-center">Your Result</h4>
+          <p class="card-text text-center mt-1">
+            Total marks of subject available = {{ student['count'] }}
+          </p>
+          <p class="card-text text-center mt-1">
+            Total marks obtained in them = {{ student['total-marks'] }}
+        </p>
+          <p class="card-text text-center mt-1">
+            Percentage = {{ student['percentage'] }}
+        </p>
+        </div>
+    </div>
+
+    {% endblock %}

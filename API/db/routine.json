@@ -1,0 +1,23 @@
+[
+  {
+    "id": "0b938424-9f5d-4d6c-a5bf-3ff595aa2b42",
+    "dept": "IT",
+    "sem": "3",
+    "subject": "C",
+    "date-time": "2021-06-02T20:00"
+  },
+  {
+    "id": "29a6b4cf-9cac-4c6b-860b-cd818483b452",
+    "dept": "CSE",
+    "sem": "2",
+    "subject": "physics",
+    "date-time": "2021-06-03T10:30"
+  },
+  {
+    "id": "e324a312-6b66-4488-ade3-f301e9bc7257",
+    "dept": "IT",
+    "sem": "2",
+    "subject": "OS",
+    "date-time": "2021-06-02T22:44"
+  }
+]

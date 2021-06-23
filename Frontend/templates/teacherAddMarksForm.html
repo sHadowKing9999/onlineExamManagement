@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% block title %}  {{message}} For Student  {% endblock %}
+
+{% block content %}
+
+<div class="container">
+    <h1 class="text-center">{{message}} For Student</h1>
+<form action="{{link}}" method="POST">
+    <div class="row">
+      <div class="col">
+        <label for="dept">Department</label>
+        <select id="dept" class="form-control" name="dept" required>
+            <option value="" disabled selected>Select...</option>
+            {% for dept in alldept %}
+            <option value="{{dept}}">{{dept}}</option>
+            {% endfor %}
+        </select>
+      </div>
+      <div class="col">
+        <label for="sem">Semester</label>
+        <select id="sem" class="form-control" name="sem" required >
+          <option value=""  disabled selected>Select...</option>
+            {% for i in totalSem %}
+            <option value="{{i}}">{{i}}</option>
+            {% endfor %}
+        </select>
+      </div>
+      <div class="col">
+        <label for="subject">Subject</label>
+        <select id="subject" class="form-control" name="subject" required >
+          <option value=""  disabled selected>Select...</option>
+            {% for i in subjects %}
+            <option value="{{i}}">{{i}}</option>
+            {% endfor %}
+        </select>
+      </div>
+    </div>
+    <br>
+    <div class="row justify-content-center">
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+  </form>
+</div>
+
+{% endblock %}

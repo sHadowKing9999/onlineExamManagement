@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+
+{% block title %} Result({{dept}}/SEM{{sem}}) of {{subject}} {% endblock %}
+{% block stylesheet %}
+<!-- <style>
+    .css-serial {
+counter-reset: serial-number;
+}
+
+.css-serial td:first-child:before {
+counter-increment: serial-number;
+content: counter(serial-number);
+} 
+</style>-->
+{%endblock%}
+
+{% block content %}
+
+<h1 class="text-center">Result {{dept}}/{{sem}} of {{subject}}</h1>
+<div class="container mt-1">
+    <table class="table table-dark table-striped table-hover table-responsive" id="admin-get-result">
+        <thead>
+            <tr>
+                <th>Roll</th>
+                <th>Name</th>
+                <th>Marks</th>
+                <th>Add Mark</th>
+            </tr>
+        </thead>
+        {% for student in studentOfDeptSem %}
+        <tr>
+            <td>
+                {{student['roll']}}
+            </td>
+            <td>
+                {{ student["name"] }}
+            </td>
+            <td>
+                {% if student['mark']==-1 %}
+                N/A 
+                {% elif student['mark']==0 %}
+                Absent or Failed Miserably
+                {% else %} 
+                {{ student['marks'] }}
+                {% endif %}
+            </td>
+            <td>
+                <form class="form-inline" action="/teacher/addmarks/{{student['id']}}/{{dept}}/{{sem}}/{{subject}} " method="post">
+                    <div class="input-group">
+                      <input type="text" name="marks" id="marks" class="marks form-control" placeholder="for absent give 0" required>
+                        <button type="submit" name="button" class="btn btn-success" id="bt">Submit mark</button>
+                    </div>
+                  </form>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    {% endblock %}

@@ -1,0 +1,16 @@
+[
+  {
+    "id":"0c28872f-402c-4521-9a1a-cf959c8fdcae",
+    "teacher-email": "kc@gcect.com",
+    "dept": "CSE",
+    "sem": "1",
+    "subject": "physics"
+  },
+  {
+    "id":"2b3a6ca2-1fc4-43fb-a747-71a1d2abc954",
+    "teacher-email": "kc@gcect.com",
+    "dept": "CSE",
+    "sem": "1",
+    "subject": "ed"
+  }
+]

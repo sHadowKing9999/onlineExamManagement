@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+
+{% block title %}   Exam Scheduling    {% endblock %}
+
+{% block content %}
+
+
+<div class="container mt-5">
+    <form action="/admin/examschedule" method="POST">
+        <div class="row">
+            <div class="col-md-6 form-group">
+                <label for="dept">Depertment :</label>
+                <select name="dept" class="form-control" id="dept" required>
+                    <option selected disabled value="">--choose--</option>
+                    <option value="CSE">CSE</option>
+                    <option value="IT">IT</option>
+                    <option value="CT">CT</option>
+                </select>
+            </div>
+            <div class="col-md-6 form-group">
+                <label for="sem">Semister :</label>
+                <select name="sem"  class="form-control" id="sem" required>
+                    <option selected disabled value="">--choose--</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                </select>
+            </div>
+        </div>
+        <div class="row">
+            <div class=" form-group col-md-6">
+                <label for="subject">Subject :</label>
+                <input type="text" name="subject" id="subject" class="form-control" placeholder="Enter Subject">
+            </div>
+            <div class="form-group col-md-6">
+                <label for="datetime">Date & Time :</label>
+                <input name="datetime" type="datetime-local" class="form-control" id="datetime" required placeholder="GCECTB-R18-3023">
+            </div>
+        </div>
+        <div class="text-center">
+            <button type="submit" class="btn btn-success">Schedule Exam</button>
+        </div>
+    </form>
+</div>
+
+{% endblock %}

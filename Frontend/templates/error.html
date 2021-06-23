@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block title %}   Error   {% endblock %}
+
+{% block content %}
+{% block stylesheet %}
+  <style>
+    .card{
+      color: black;
+      margin:2% 25% 2% 25%;
+    }
+    .card-body{
+      font-family: 'Courier New', Courier, monospace;
+      font-weight: bolder;
+    }
+  </style>
+{% endblock %}
+<div class="container">
+    <h1 class="text-center">Error</h1>
+    <div class="card" >
+        <div class="card-body offset-md-3 col-md-6">
+          <h4 class="card-title text-center">Error at {{errorAt}}</h4>
+          <p class="card-text text-center mt-1">
+            Message : {{message}}
+          </p>
+        </div>
+        <a href="{{returnto}}" role="button" class="btn btn-light">RETURN</a>
+    </div>
+    
+</div>
+
+{% endblock %}

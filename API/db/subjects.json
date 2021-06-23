@@ -1,0 +1,39 @@
+{
+    "CSE":
+    {
+        "1":["Physics","Math1","Basic Electric Engineering","Physics Lab","Basic Electric Engineering Lab","ED"],
+        "2":["Chemistry","Math2","C","English","Chemistry Lab","C Lab","Mechanical Workshop","Language Lab"],
+        "3":["Maths3","Digital Electronics","CO","DSA","Economics","Digital Electronics Lab","CO Lab","DSA Lab","Python Lab"],
+        "4":["Discrete Maths","Communication Engineering","DAA","FLAT","CA","EVS","Communication Lab","Algorithm Lab","Programming Lab C++"],
+        "5":["OS","DBMS","OOP","Elective1","Indian Constitution","OS Lab","DBMS Lab","JAVA Lab"],
+        "6":["CN","Compiler Design","Elective2","Elective3","Industrial Management","Networks Lab","Project1"],
+        "7":["Web Programming","Distributed Computer Systems","Elective4","Elective5","Web Programming Lab","Elective4 Lab","GD","Industrial Training","Project2"],
+        "8":["Cryptography","Elective6","Elective7","Project3","Comprehensive Viva Voce"]
+    },
+    "IT":
+    {
+        "1":["Physics","Math1","Basic Electric Engineering","Physics Lab","Basic Electric Engineering Lab","ED"],
+        "2":["Chemistry","Math2","C","English","Chemistry Lab","C Lab","Mechanical Workshop","Language Lab"],
+        "3":["Maths3","Digital Electronics","CO","DSA","Economics","Digital Electronics Lab","CO Lab","DSA Lab","Python Lab"],
+        "4":["Discrete Maths","Communication Engineering","DAA","FLAT","CA","EVS","Communication Lab","Algorithm Lab","Programming Lab C++"],
+        "5":["OS","DBMS","OOP","Elective1","Indian Constitution","OS Lab","DBMS Lab","JAVA Lab"],
+        "6":["CN","Compiler Design","Elective2","Elective3","Industrial Management","Networks Lab","Project1"],
+        "7":["Web Technology","Internet Networking","Elective4","Elective5","Web Technology Lab","Elective4 Lab","Internet Networking Lab","Industrial Training","Project2"],
+        "8":["E-Commerce","Elective6","Elective7","E-Commerce Lab","Project3","Comprehensive Viva Voce"]
+    },
+    "CT":
+    {
+        "1":["Maths1","Chemistry","C Programming","Chemistry Lab","C Programming Lab","ED"],
+        "2":["Maths2","Physics","Basic Electric Engineering","English","Physics Lab","Basic Electric Engineering Lab","Mechanical Workshop","Language Lab"],
+        "3":["Law for Engineers","Maths3","Geology","Unit Operation 1","Ceramic Raw Materials","Energy Resources","Geology Lab","Unit Operation Lab","Chemical Analysis Lab"],
+        "4":["Numerical Methods","Unit Operation 2","Biology","Thermodynamics","Process Ceramics","Numerical Methods Lab","Fuel Testing Lab","Powder Preparation Lab","Physical Testing of Raw Materials"],
+        "5":["Refractories","Glass Science","Whitewares","Cement & Concrete","Elective1","Refractories Lab","Glass Lab","Whitewares Lab","Cement & Concrete Lab","Elective1 Lab"],
+        "6":["Economics","Monolithic Refractories","Engineering Materials Science","Metallurgy","Ceramic Coatings","Elective2","Instrumental Analysis Lab","Ceramic Coating Lab","Seminar","Technical Communications","Project1"],
+        "7":["Advanced Ceramics","Physical Ceramics","Elective3","Elective4","Quality Management","GD","Plant Design","Industrial Training","Project2"],
+        "8":["Industrial Management","Elective5","Elective6","Comprehensive Viva Voce","Project3"]
+
+    }
+}
+
+
+

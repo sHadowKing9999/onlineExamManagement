@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+
+{% block title %}  Add Question Link For Student of {{dept}}/{{sem}} for {{subject}}  {% endblock %}
+{% block stylesheet %}
+<style>
+form{
+    margin:5% 25% 20% 30%;
+}
+.card{
+      color: black;
+      margin:2% 25% 2% 25%;
+    }
+.card-body{
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bolder;
+}
+</style>
+{% endblock %}
+{% block content %}
+
+<div class="container">
+    <h1 class="text-center">Add Transaction Id For Semester {{ student['sem'] }}</h1>
+    <div class="card" >
+        <div class="card-body offset-md-3 col-md-6">
+          <h4 class="card-title text-center">Your Details</h4>
+          <p class="card-text text-center mt-1">
+            Name : {{student['name']}}
+          </p>
+          <p class="card-text text-center mt-1">
+            Roll : {{student['roll']}}
+          </p>
+          <p class="card-text text-center mt-1">
+            Reg. No. : {{student['reg']}}
+          </p>
+          <p class="card-text text-center mt-1">
+            Department : {{student['dept']}}
+          </p>
+          <p class="card-text text-center mt-1">
+            Academic Year : {{student['academic-year']}}
+          </p>
+          <p class="card-text text-center mt-1">
+            Fees Paid Approval : {% if student['fee']==0 %}
+            No
+            {% else %}
+            Yes
+            {% endif %}
+          </p>
+        </div>
+    </div>
+    {% if trxid!='' and len>=12 %}
+<div class="row">
+    <div class="col-md-6 offset-md-3 text-center mt-3" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;font-weight: bolder;">
+        <h2 >Transaction Id already added . If you want to update transaction id submit new transaction id</h2>
+        <p>The previous Transaction Id submitted is : {{trxid}}</p>
+    </div>
+</div>
+{% endif %}
+        <form action="/student/addtrxid" method="post">
+            <div class="form-group row">
+                <input type="text" name="trxid" id="trxid" class="col-md-8 form-control-lg" placeholder="Transaction ID here" required>
+                <button type="submit" name="button" class="btn btn-success mt-2" id="bt">Submit Transaction ID</button>
+            </div>
+        </form> 
+</div>
+
+{% endblock %}

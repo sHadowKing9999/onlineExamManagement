@@ -1,0 +1,73 @@
+  
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Add Details</title>
+	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<div class="p-3 bg-dark text-white">
+		<div class="text-center">
+			<h2>Enter Details</h2>
+		</div>
+	</div>
+	<div class="container mt-5">
+		<form action="/submit" method="POST" enctype="multipart/form-data">
+			<div class="form-group">
+				<label for="studentname">Student Name :</label>
+				<input name="studentname" type="text" class="form-control" id="studentname" placeholder="Enter Name" required>
+			</div>
+            <div class="row">
+				<div class=" form-group col-md-6">
+					<label for="studentemail">Email :</label>
+                    <input type="email" name="studentemail" id="studentemail" class="form-control" placeholder="Enter Email">
+				</div>
+				<div class="form-group col-md-6">
+					<label for="studentroll">Roll :</label>
+					<input name="studentroll" type="text" class="form-control" id="studentroll" required placeholder="Enter Roll">
+				</div>
+			</div>
+			<div class="row">
+				<div class=" form-group col-md-6">
+					<label for="studentdept">Depertment :</label>
+					<select name="studentdept" class="form-control" id="studentdept" required>
+						<option selected disabled value="">--choose--</option>
+						<option value="9">9</option>
+						<option value="10">10</option>
+						<option value="11">11</option>
+						<option value="12">12</option>
+					</select>
+				</div>
+				<div class="form-group col-md-6">
+					<label for="studentsem">Semister :</label>
+					<select name="studentsem"  class="form-control" id="studentsem" required>
+                        <option selected disabled value="">--choose--</option>
+						<option value="9">9</option>
+						<option value="10">10</option>
+						<option value="11">11</option>
+						<option value="12">12</option>
+					</select>
+				</div>
+			</div>
+			<div class="row">
+				<div class="form-group col-md-6">
+					<label for="stusentno">Phone Number :</label>
+					<input name="stusentno" type="tel" class="form-control" id="stusentno" placeholder="Enter 10 digit number" pattern="[0-9]{10}" required>
+				</div>
+				<div class="form-group col-md-6">
+					<label for="studentreg">Registration :</label>
+					<input name="studentreg" type="tel" class="form-control" id="studentreg" placeholder="Enter Registration number" pattern="[0-9]{10}" required>
+				</div>
+			</div>
+			<div class="text-center">
+				<button type="submit" class="btn btn-success">Add Student</button>
+			</div>
+		</form>
+	</div>
+</body>
+</html>

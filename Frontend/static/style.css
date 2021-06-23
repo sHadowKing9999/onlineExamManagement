@@ -1,0 +1,21 @@
+body{
+    font-family: 'Inter', sans-serif;
+    background-image: linear-gradient(to right bottom,#2827CC,#120E43);
+    color: white;
+    height: 100vh;
+}
+nav{
+    position: fixed;
+    background-image: linear-gradient(to right bottom,#120E43,#2827CC);
+}
+
+p {
+    margin: 0;
+}
+
+
+a{
+    text-decoration: none;
+    color: white;
+}
+

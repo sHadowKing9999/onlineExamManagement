@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+{% block title %}  Add Question Link For Student of {{dept}}/{{sem}} for {{subject}}  {% endblock %}
+{% block stylesheet %}
+<style>
+form{
+    margin:5% 25% 20% 30%;
+}
+.card{
+      color: black;
+      margin:2% 25% 2% 25%;
+    }
+.card-body{
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bolder;
+}
+</style>
+{% endblock %}
+{% block content %}
+
+<div class="container">
+    <h1 class="text-center">Exam Link for {{dept}}/{{sem}} of {{subject}}</h1>
+    <div class="card" >
+        <div class="card-body offset-md-3 col-md-6">
+          <h4 class="card-title text-center">Your Link</h4>
+          {% if current.year==scheduled.year and current.month==scheduled.month and current.day==scheduled.day and current.hr==scheduled.hr and current.min>=scheduled.min %}
+          <p class="card-text text-center mt-1">
+            Link : <a style="color:black" href="{{url}}">{{url}}</a>
+          </p>
+          {% else %}
+          <p class="card-text text-center mt-1">
+            Time not yet same as scheduled time. Refresh once the scheduled time is reached.
+            {{current.year==scheduled.year}}
+            {{current.month}} {{scheduled.month}}
+            {{current.day}} {{scheduled.day}}
+            {{current.hr==scheduled.hr}}
+            {{current.min>=scheduled.min}}
+          </p>
+          {% endif %}
+        </div>
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block title %} Fee Status({{student['dept']}}/SEM{{student['sem']}}) {% endblock %}
+{% block content %}
+<h1 class="text-center">Fee Status of {{student['dept']}}/SEM {{student['sem']}}</h1>
+<div class="container mt-1">
+    <div class="card" >
+        <div class="card-body">
+          <h5 class="card-title">{{Modified exam allowance status of {{student['roll']}} - {{student['name']}}</h5>
+          <p class="card-text">
+            <h2>Allowed for exam : {% if student['fee'] %}
+              Yes
+            {% else %}
+              No
+            {% endif %}</h2>
+          </p>
+          <a href="/admin/feeform" class="btn btn-primary">Go to Check Fee</a>
+        </div>
+      </div>
+{% endblock %}

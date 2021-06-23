@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{% block title %}  Add Question Link For Student of {{dept}}/{{sem}} for {{subject}}  {% endblock %}
+{% block stylesheet %}
+<style>
+form{
+    margin:5% 25% 20% 30%;
+}
+.card{
+      color: black;
+      margin:2% 25% 2% 25%;
+    }
+.card-body{
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bolder;
+}
+</style>
+{% endblock %}
+{% block content %}
+
+<div class="container mt-2">
+    <h1 class="text-center">Enter date and time of the Exam</h1>
+    <form action='/student/getexamlinks' method="POST">
+        <div class="row">
+            <div class="form-group col-md-6">
+                <label for="date-time">Date & Time :</label>
+                <input name="date-time" type="datetime-local" class="form-control" id="date-time" required placeholder="GCECTB-R18-3023">
+            </div>
+        </div>
+            <button type="submit" class="btn btn-success">Get Link</button>
+    </form>
+</div>
+
+{% endblock %}

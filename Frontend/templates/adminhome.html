@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% block title %}   GCECT Exam Admin    {% endblock %}
+
+{% block content %}
+
+{% block stylesheet %}
+<style>
+    .btn{
+        margin: 2%;
+    }
+</style>
+{%endblock%}
+
+{% block flash %}
+{% with messages = get_flashed_messages() %}
+{% if messages %}
+    {% for message in messages %}
+    <div class="alert alert-warning alert-dismissible fade show text-center" role="alert">
+        <strong>{{message}}</strong>
+      </div>
+    {% endfor %}
+{% endif %}
+{% endwith %}
+{% endblock %}
+<h1 class="text-center">GCECT EXAMINATION MANAGEMENT SYSTEM</h1>
+<h1 class="text-center">Admin</h1>
+<div class="conatiner mt-5">
+    <div class="row">
+        <div class="col-4"></div>
+        <div class="col-4 text-center">
+            <a href="/admin/addstudentform"><button class="btn btn-primary">Add Student</button></a>
+            <a href="/admin/addteacherform"><button class="btn btn-primary">Add Teacher</button></a>
+            <a href="/admin/feeform"><button class="btn btn-primary">Fee Clearence</button></a>
+            <a href="/admin/teacheralloteform"><button class="btn btn-primary">Teacher Allotement</button></a>
+            <a href="/admin/result"><button class="btn btn-primary">Result</button></a>
+            <a href="/admin/examscheduleform"><button class="btn btn-primary">Exam Schedule</button></a>
+            <a href="/admin/logout"><button class="btn btn-primary">Log out</button></a>
+
+        </div>
+        <div class="col-4"></div>
+    </div>
+</div>
+
+{% endblock %}

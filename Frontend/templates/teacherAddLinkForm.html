@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{% block title %}  Add Question Link For Student of {{dept}}/{{sem}} for {{subject}}  {% endblock %}
+{% block stylesheet %}
+<style>
+form{
+    margin:5% 25% 20% 30%;
+}
+</style>
+{% endblock %}
+{% block content %}
+
+<div class="container">
+    <h1 class="text-center">Add Question Link For Student of {{dept}}/{{sem}} for {{subject}}</h1>
+{% if link!='' %}
+<div class="row">
+    <div class="col-md-6 offset-md-3 text-center mt-3" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;font-weight: bolder;">
+        <h2 >Link already added . If you want to update link submit the new link</h2>
+        <p>The previous link is <a href="{{link}}" role="button">{{link}}</a></p>
+    </div>
+</div>
+{% endif %}
+<!-- <form action="/teacher/linktobeadded/{{dept}}/{{sem}}/{{subject}} " method="post">
+    <div class="form-row align-items-center">
+      <div class="col-auto offset-md-2">
+        <input type="text" name="link" id="link" class="col-md-6 form-control-lg" placeholder="Insert google forms link here">
+      </div>
+      <div class="col-auto">
+        <button type="submit" name="button" class="btn btn-success" id="bt">Submit Link</button>
+      </div>
+    </div>
+  </form> -->
+        <form action="/teacher/linktobeadded/{{dept}}/{{sem}}/{{subject}} " method="post">
+            <div class="form-group row">
+                <input type="text" name="link" id="link" class="col-md-8 form-control-lg" placeholder="Insert google forms link here" required>
+                <button type="submit" name="button" class="btn btn-success" id="bt">Submit Link</button>
+            </div>
+        </form> 
+
+</div>
+
+{% endblock %}
